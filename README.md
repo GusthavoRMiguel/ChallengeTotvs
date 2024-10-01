@@ -1,5 +1,20 @@
 # WarehouseDelivery
 
+## Instalação
+
+Clone o repositório:io:
+   `git clone https://github.com/GusthavoRMiguel/ChallengeTotvs.git`
+
+2. Navegue até o diretório do projeto:
+   `cd ChallengeTotvs`
+
+3. Abra o arquivo **index.html** no seu navegador para acessar a página inicial. # ChallengeTotvs
+
+
+## Link do Site
+
+`https://warehouse-delivery.vercel.app/`
+
 ## Descrição
 
 WarehouseDelivery é uma aplicação web para gerenciar o cadastro de filiais e seus respectivos envios e recebimentos. Esta aplicação permite que os usuários cadastrem novas filiais, preencham automaticamente os campos de endereço com base no CEP e gerenciem envios entre filiais.
@@ -57,16 +72,6 @@ WarehouseDelivery é uma aplicação web para gerenciar o cadastro de filiais e 
 ├── cadastro.html
 └── dashboard.html
 
-
-## Instalação
-
-Clone o repositório:io:
-   `git clone https://github.com/GusthavoRMiguel/ChallengeTotvs.git`
-
-2. Navegue até o diretório do projeto:
-   `cd ChallengeTotvs`
-
-3. Abra o arquivo **index.html** no seu navegador para acessar a página inicial. # ChallengeTotvs
 
 
 
