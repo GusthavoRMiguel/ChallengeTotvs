@@ -46,7 +46,7 @@ class CadastroController {
       return false; 
     }
 
-
+ 
     this.toast.showToast('Filial cadastrada com sucesso!', 'success'); 
     window.location.href = '/index.html';
     return true; 

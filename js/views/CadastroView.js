@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const bairro = document.getElementById('bairro');
     const cidade = document.getElementById('cidade');
     const estado = document.getElementById('estado');
-
+ 
     clearErrorTooltip(codigoFilial);
     clearErrorTooltip(nomeFilial);
     clearErrorTooltip(codResponsavelAlmox);

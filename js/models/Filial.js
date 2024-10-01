@@ -15,8 +15,8 @@ class Filial {
       codigo: responsavel.codigo,
       nome: responsavel.nome,
     };
-    this.envios = [];
-    this.recebimentos = [];
+    this.envios = []; 
+    this.recebimentos = []; 
   }
 
   static validarCodigo(codigo) {
@@ -25,11 +25,10 @@ class Filial {
   }
 
   criarFilial() {
-  
     if (Filial.validarCodigo(this.codigo)) {
       const filiais = JSON.parse(localStorage.getItem('filiais')) || [];
       filiais.push(this);
-      localStorage.setItem('filiais', JSON.stringify(filiais));
+      Filial.salvarFiliais(filiais);
       return true;
     } else {
       return false;
@@ -38,6 +37,32 @@ class Filial {
 
   static listar() {
     return JSON.parse(localStorage.getItem('filiais')) || [];
+  }
+ 
+  static salvarFiliais(filiais) {
+    localStorage.setItem('filiais', JSON.stringify(filiais));
+  }
+
+  static criarEnvio(codigoFilial, envio) {
+    const filiais = Filial.listar();
+    const filial = filiais.find(filial => filial.codigo === codigoFilial);
+    if (!filial) {
+      throw new Error('Filial não encontrada');
+    }
+
+    filial.envios.push(envio);
+    Filial.salvarFiliais(filiais);
+  }
+
+  static criarRecebimento(codigoFilial, recebimento) {
+    const filiais = Filial.listar();
+    const filial = filiais.find(filial => filial.codigo === codigoFilial);
+    if (!filial) {
+      throw new Error('Filial não encontrada');
+    }
+
+    filial.recebimentos.push(recebimento);
+    Filial.salvarFiliais(filiais);
   }
 }
 

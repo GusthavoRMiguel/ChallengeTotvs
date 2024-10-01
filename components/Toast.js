@@ -4,7 +4,7 @@ class Toast {
         this.toastContainer.className = 'toast-container';
         document.body.appendChild(this.toastContainer); 
     }
-
+ 
     show(message, type = 'success') {
         const toast = document.createElement('div');
         toast.className = `toast toast-${type}`;
