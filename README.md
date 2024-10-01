@@ -39,6 +39,21 @@ WarehouseDelivery é uma aplicação web para gerenciar o cadastro de filiais e 
 6. **Confirmar Recebimento**: Clique no botão "Receber" para confirmar um recebimento pendente.
 7. **Detalhes**: Clique no botão "Ver Detalhes" para visualizar mais informações sobre um envio ou recebimento.
 
+8. ### Decisões do Projeto
+
+- **Estrutura MVC**: Adotei uma abordagem semelhante ao padrão MVC (Model-View-Controller) para garantir maior modularidade no código. Essa estrutura permite que as diferentes partes da aplicação sejam separadas, facilitando a manutenção e o desenvolvimento de novas funcionalidades.
+
+- **Programação Orientada a Objetos (POO)**: Apliquei princípios de programação orientada a objetos para organizar as classes e objetos do projeto. Isso não apenas promoveu uma estrutura de código mais clara e reutilizável, mas também ajudou na encapsulação de dados e na implementação de lógica específica em cada classe.
+
+- **Responsividade**: Devido ao tempo limitado, não foi possível implementar a responsividade para dispositivos móveis. A principal dificuldade reside na adaptação das tabelas, que apresentam desafios significativos para garantir uma visualização adequada em telas menores.
+
+### Sugestões Futuras
+
+- **Refatoração do Sistema de Login e Armazenamento**: Uma melhoria futura seria refatorar o sistema de login e armazenamento para permitir conectividade online. Atualmente, o sistema se limita aos dados armazenados no localStorage, o que pode restringir a escalabilidade e a flexibilidade da aplicação.
+
+- **Elaboração do Layout Mobile**: A implementação de um layout responsivo para dispositivos móveis é uma prioridade para versões futuras, visando melhorar a experiência do usuário em diferentes tamanhos de tela.
+
+
 
 ## Tecnologias Utilizadas
 
