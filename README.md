@@ -50,29 +50,33 @@ WarehouseDelivery é uma aplicação web para gerenciar o cadastro de filiais e 
 
 
 ## Estrutura do Projeto
-.
-├── assets/
-│   └── homeImg.jpg
-├── css/
-│   └── styles.css
-├── js/
-│   ├── controllers/
-│   │   ├── CadastroController.js
-│   │   ├── DashboardController.js
-│   │   └── LoginController.js
-│   ├── models/
-│   │   ├── Filial.js
-│   │   ├── Toast.js
-│   │   └── Entrega.js
-│   └── views/
-│       ├── CadastroView.js
-│       ├── DashboardView.js
-│       └── LoginView.js
-├── index.html
-├── cadastro.html
-└── dashboard.html
+
+- **assets/**
+  - `homeImg.jpg`
+- **css/**
+  - `styles.css`
+- **js/**
+  - **controllers/**
+    - `CadastroController.js`
+    - `DashboardController.js`
+    - `LoginController.js`
+  - **models/**
+    - `Filial.js`
+    - `Toast.js`
+    - `Entrega.js`
+  - **views/**
+    - `CadastroView.js`
+    - `DashboardView.js`
+    - `LoginView.js`
+- [`index.html`]
+- [`cadastro.html`]
+- [`dashboard.html`]
 
 
 
+## Diagrama BPMN
 
+[![Diagrama BPMN](https://via.placeholder.com/150)](https://miro.com/app/live-embed/uXjVLYUBjlQ=/?moveToViewport=1265,-28,3067,3312&embedId=1032483062)
+
+Clique na imagem para visualizar o diagrama BPMN.
 
