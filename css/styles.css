@@ -22,7 +22,7 @@ main {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 1rem;
 }
 
 .login-container {
@@ -48,28 +48,40 @@ h1 {
 }
 
 .dashboard {
-  display: flow-root;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
-  padding: 2rem;
+  padding: 1rem;
   background-color: #dbdbdd;
+  justify-content: flex-start;
+  overflow-y: scroll;
 }
 
 .dashboard img {
   width: 100%;
-  height: 100%;
-  border: solid 2rem #dbdbdd;
+  height: auto;
+  border: none;
+  margin-top: 50%;
 }
 
 aside {
-  width: 25%;
+  width: 20%;
   justify-content: center;
+  padding: 1rem;
 }
 
+aside h3 {
+  font-size: 1rem;
+}
 
 aside nav {
   padding: 10px;
   margin-top: 50%;
+}
+
+aside nav button span {
+  display: none;
 }
 
 table {
@@ -78,6 +90,27 @@ table {
   padding: 2rem;
   margin-top: 3rem;
   border-radius: 10px;
+}
+
+table thead {
+  display: none;
+}
+
+table tbody tr {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  border: solid 1px #6c7783;
+}
+
+table tbody tr td {
+  display: grid;
+  text-align: center;
+  gap: 10px;
+}
+
+table tbody tr td span {
+  font-size: .8em;
 }
 
 .pagination a {
@@ -96,4 +129,61 @@ table {
   background-color: #383e39;
   border-color: #020202;
   color: #fff;
+}
+
+
+@media (min-width: 992px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  aside {
+    width: 25%;
+    padding: 1.5rem;
+  }
+
+  aside h3 {
+    font-size: x-large;
+  }
+
+  aside nav button span {
+    display: flex;
+    place-content: center;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .dashboard {
+    padding: 2rem;
+    overflow-y: hidden;
+  }
+
+  .dashboard img {
+    height: 100%;
+    border: solid 2rem #dbdbdd;
+    margin-top: 0;
+  }
+
+  table thead {
+    display: table-header-group;
+  }
+
+  table tbody tr {
+    display: table-row;
+    margin-bottom: 0;
+    border: none;
+  }
+
+  table tbody tr td {
+    display: table-cell;
+    text-align: start;
+    gap: 0;
+  }
+
+  table tbody tr td span {
+    display: none;
+  }
+
 }

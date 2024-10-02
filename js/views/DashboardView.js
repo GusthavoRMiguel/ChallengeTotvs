@@ -75,12 +75,13 @@ document.addEventListener('DOMContentLoaded', () => {
       paginatedEnvios.forEach(envio => {
         html += `
           <tr>
-            <td class="align-middle" style="max-width: 300px; word-wrap: break-word;">${envio.item}</td>
-            <td class="align-middle">${envio.filialDestino.nome}</td>
-            <td class="align-middle">${envio.dataEnvio}</td>
-            <td class="align-middle">${envio.dataChegada}</td>
-            <td class="align-middle">${envio.status}</td>
+            <td class="align-middle" style="max-width: 300px; word-break: break-all;"><span>Item:</span>${envio.item}</td>
+            <td class="align-middle"><span>Destino:</span>${envio.filialDestino.nome}</td>
+            <td class="align-middle"><span>Data de Envio:</span>${envio.dataEnvio}</td>
+            <td class="align-middle"><span>Previsão de Chegada:</span>${envio.dataChegada}</td>
+            <td class="align-middle"><span>Status:</span>${envio.status}</td>
             <td class="align-middle">
+              <span>Ações:</span>
               <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#modalDetalhesEnvio" onClick="renderDetalhesEnvio('${envio.id}')">Ver Detalhes</button>
             </td>
           </tr>
@@ -162,12 +163,13 @@ document.addEventListener('DOMContentLoaded', () => {
       paginatedRecebimentos.forEach(recebimento => {
         html += `
           <tr>
-            <td class="align-middle" style="max-width: 300px; word-wrap: break-word;">${recebimento.item}</td>
-            <td class="align-middle">${recebimento.filialOrigem.nome}</td>
-            <td class="align-middle">${recebimento.dataEnvio}</td>
-            <td class="align-middle">${recebimento.dataChegada}</td>
-            <td class="align-middle">${recebimento.status}</td>
+            <td class="align-middle" style="max-width: 300px; word-break: break-all;"><span>Item:</span>${recebimento.item}</td>
+            <td class="align-middle"><span>Origem:</span>${recebimento.filialOrigem.nome}</td>
+            <td class="align-middle"><span>Data de Envio:</span>${recebimento.dataEnvio}</td>
+            <td class="align-middle"><span>Previsão de Chegada:</span>${recebimento.dataChegada}</td>
+            <td class="align-middle"><span>Status:</span>${recebimento.status}</td>
             <td class="align-middle">
+            <span>Ações:</span>
               ${recebimento.status === 'pendente' ? `<button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalConfirmacaoRecebimento" onClick="renderConfirmacaoRecebimento('${recebimento.id}')">Receber</button>` : `<button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#modalDetalhesRecebimento" onClick="renderDetalhesRecebimento('${recebimento.id}')">Ver Detalhes</button>`}
             </td>
           </tr>
@@ -366,7 +368,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   });
  
-  filialDisplay.innerText = `${filialLogada.codigo} - ${filialLogada.nome}`;
+  filialDisplay.innerText = `${filialLogada.codigo}  ${filialLogada.nome}`;
   initializeTooltips();
   protegerRotaPrivada();
   populateSelectFilialDestino(); 
